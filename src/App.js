@@ -1,11 +1,17 @@
 
 import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import VotingList from './pages/voting';
 
 function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route path="/voting" component={VotingList} exact/>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
